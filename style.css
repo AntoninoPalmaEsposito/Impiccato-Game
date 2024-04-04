@@ -1,0 +1,14 @@
+body {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(235, 228, 219);
+  }
+  
+
+#tastiera button {
+    background-color: #dacfcf;
+    padding: 10px 20px;
+    border-radius: 100%;
+    border: 2px solid #808080;
+}

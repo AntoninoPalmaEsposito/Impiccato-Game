@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="flex flex-col px-[40px]">
+      <!-- titolo -->
+      <div id="titolo" class="">
+        <h1 class="text-center text-[60px] md:text-[80px]">L'IMPICCATO</h1>
+      </div>
+      <!-- impiccato-cont -->
+      <div id="impiccato-container" class="my-8 flex justify-evenly items-center text-[35px] max-lg:flex-col">
+        <p class="pr-[88px] max-lg:p-0">Vite: <span id="vite"></span></p>
+        <img id="img" src="assets/start.png" alt="immagine-impiccato" class="h-[300px]" />
+        <button id="reload" class="hover:bg-[#dc2626] hover:text-white hover:border-white px-3 rounded-3xl border-2 border-[#808080] bg-[#dacfcf]">Ricomincia</button>
+        
+      </div>
+      <!-- parola user -->
+      <div class="flex justify-center items-center my-12">
+        <p class="hidden" id="parolaDaIndovinare"></p>
+
+        <div id="parolaUser" class="flex gap-3 text-[40px]">
+
+        </div>
+      </div>
+      <!-- tastiera-container -->
+      <div id="tastiera-container" class="">
+        <!-- div-tastiera -->
+        <div
+          id="tastiera"
+          class=" grid grid-cols-11 mb-10 gap-5 justify-center items-center justify-items-center content-evenly text-[30px] px-38 md:px-32 max-lg:grid-cols-4"
+        >
+          <button id="a">A</button>
+          <button id="b">B</button>
+          <button id="c">C</button>
+          <button id="d">D</button>
+          <button id="e">E</button>
+          <button id="f">F</button>
+          <button id="g">G</button>
+          <button id="h">H</button>
+          <button id="i">I</button>
+          <button id="j">J</button>
+          <button id="k">K</button>
+          <button id="l">L</button>
+          <button id="m">M</button>
+          <button id="n">N</button>
+          <button id="o">O</button>
+          <button id="p">P</button>
+          <button id="q">Q</button>
+          <button id="r">R</button>
+          <button id="s">S</button>
+          <button id="t">T</button>
+          <button id="u">U</button>
+          <button id="v">V</button>
+          <button id="w">W</button>
+          <button id="x">X</button>
+          <button id="y">Y</button>
+          <button id="z">Z</button>
+        </div>
+      </div>
+    </main>
+
+  <script src="script .js"></script>
+
+</body>
+</html>
