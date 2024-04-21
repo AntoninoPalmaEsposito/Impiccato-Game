@@ -13,26 +13,20 @@
 </head>
 
 <body>
-  <main class=" flex flex-col px-[50px] lg:px-[150px] pt-[15px]">
-
-
+  <main class="flex flex-col px-[10VW] lg:px-[150px] pt-[3vw] md:pt-[15px]">
     </div>
 
-    <div id="titolo"
-      class="sm:flex-col justify-center  md:flex md:justify-between items-center lg:block mb-[60px] md:mb-[80px] lg:mb-0">
+
+
+    <div id="titolo" class=" justify-center  md:flex md:justify-between items-center lg:block mb-[-1.5vw] md:mb-[20px] lg:mb-0">
 
       <!-- titolo -->
-      <h1 class=" ml-0 md:ml-[18vw] lg:ml-0 text-center lg:text-start  font-extrabold text-[10vw] md:text-[60px] ">
+      <h1 class=" ml-0 md:ml-[18vw] mb-[7vw] md:mb-0 lg:ml-0 text-center lg:text-start  font-extrabold text-[10vw] md:text-[60px] ">
         L'IMPICCATO</h1>
 
-
-
       <!-- ricomincia -->
-
       <button id="reload"
-        class="hidden md:flex ml-[10vw] lg:ml-0  h-[40px] lg:h-[50px] items-center mt-[5px] justify-center text-[18px] lg:text-[23px] px-[10px] py-[3px] border-2 border-[rgb(235,149,99)] text-[rgb(235,149,99)] z-[1] font-semibold">Ricomincia</button>
-
-
+        class="flex ml-[18vw] lg:ml-0 h-[7vw]  md:h-[40px] lg:h-[50px] items-center md:mt-[5px] justify-center text-[3.5vw] md:text-[18px] lg:text-[23px] px-[2vw] py-[0.5vw] md:px-[10px] md:py-[3px] border-2 border-[rgb(235,149,99)] text-[rgb(235,149,99)] z-[1] font-semibold">Ricomincia</button>
 
     </div>
 
@@ -40,44 +34,38 @@
 
     <!-- impiccato-cont -->
     <div id="impiccato-container"
-      class=" flex flex-col items-center justify-center z-[-1]  text-[35px] mt-[-80px] pt-[50px]">
-
-
+      class=" flex flex-col items-center justify-center z-[-1] text-[7vw] mt-[-4.5vw]  md:text-[35px] md:mt-[-80px] md:pt-[50px]">
 
       <!-- vite -->
-      <div class="mb-[20px]  md:mb-[10px] text-[25px] flex items-center justify-between font-semibold ">
-       
-        <button id="reload"
-          class="block md:hidden ml-0 md:ml-[10vw] lg:ml-0  h-[40px] lg:h-[50px] items-center mt-[0px] md:mt-[5px]  lg:justify-center text-[18px] lg:text-[23px] px-[10px] py-[3px] border-2 border-[rgb(235,149,99)] text-[rgb(235,149,99)] z-[1] font-semibold">Ricomincia</button>
-        
-          <img src="assets/cuore.png" alt="immagine-impiccato" class="h-[23px]  opacity-65" />
-
-        <span id="vite" class="font-bold"></span>
-
-      </div>
+      <div class="mb-[3vw] ml-[31vw] md:mb-[10px] text-[4.5vw] md:text-[25px] flex items-center font-semibold "><img src="assets/cuore.png"
+          alt="immagine-impiccato" class="h-[4.5vw] md:h-[23px]  opacity-65" /> <span id="vite" class="font-bold"></span></div>
 
       <!-- img -->
-      <div class="rounded-[30px] flex justify-center items-center  rilievo2 h-[340px] w-[300px]">
-        <img id="img" src="assets/start.png" alt="immagine-impiccato" class="h-[300px] mb-[10px] opacity-65" />
+      <div class="rounded-[6vw] md:rounded-[30px]  flex justify-center items-center  rilievo2 w-[50vw] h-[60vw] md:h-[340px] md:w-[300px]">
+        <img id="img" src="assets/start.png" alt="immagine-impiccato" class="h-[45vw] md:h-[300px] mb-[-0.5vw] md:mb-[10px] opacity-65" />
       </div>
 
     </div>
-
 
 
 
     <!-- parola user -->
-    <div class="flex justify-center items-center mb-[70px] mt-[40px] ">
+    <div class="flex justify-center items-center mb-[10vw] md:mb-[70px] mt-[6vw] md:mt-[40px] ">
+
       <p class="hidden" id="parolaDaIndovinare"></p>
 
-      <div id="parolaUser" class="flex gap-3 rilievo2 px-[50px] pb-[10px] rounded-[30px] text-[40px]">
+      <div id="parolaUser" class="flex gap-3 rilievo2 px-[7vw] md:px-[50px] pb-[2vw] md:pb-[10px] rounded-[6vw] md:rounded-[30px] text-[6vw] md:text-[40px]"></div>
 
-      </div>
     </div>
+
+
+
     <!-- tastiera-container -->
     <div id="tastiera-container " class="">
+
       <!-- div-tastiera -->
-      <div class="grid-container   justify-center items-center justify-items-center  text-[30px] px-auto ">
+      <div class="grid-container   justify-center items-center justify-items-center  md:text-[30px] px-auto ">
+
         <button id="a"
           class="flex justify-center rilievo items-center hover:scale-[1.2] duration-300  w-[60px] h-[60px] rounded-[100px]"><span
             class="font-bold  text-[28px]">A</span></button>
@@ -156,8 +144,6 @@
         <button id="z"
           class="flex justify-center rilievo items-center  w-[60px] h-[60px] rounded-[100px] hover:scale-[1.2] duration-300"><span
             class="font-bold  text-[28px] ">Z</span></button>
-
-
       </div>
     </div>
   </main>
