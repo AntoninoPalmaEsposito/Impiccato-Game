@@ -1,4 +1,103 @@
-const parole = ["salame", "catamarano", "bamba", "poltiglia"];
+const parole = [
+"salame", 
+"catamarano",
+"bamba",
+"poltiglia",
+"bicicletta",
+"cappuccino",
+"gelato",
+"pizza",
+"pasta",
+"caffè", 
+"tiramisù", 
+"panettone",
+"focaccia",
+"spaghetti",
+"formaggio",
+"lasagna",
+"risotto",
+"gnocchi",
+"espresso",
+"prosciutto", 
+"mozzarella", 
+"limoncello",
+"cannoli",
+"biscotti",
+"ciabatta",
+"pesto",
+"tortellini",
+"cappelletti",
+"amaretto",
+"grappa", 
+"panna", 
+"cioccolato",
+"vino",
+"tramezzino",
+"bruschetta",
+"minestrone",
+"polenta",
+"tartufo",
+"frittata",
+"cacciatorini", 
+"focaccine", 
+"ciambella",
+"crostata",
+"cavatelli",
+"tagliatelle",
+"orecchiette",
+"crespelle",
+"cassata",
+"gelatina",
+"biscotto", 
+"cannelloni", 
+"cappelletti",
+"cavallucci",
+"ciambellone",
+"cioccolatino",
+"cornetto",
+"croissant",
+"fagiolini",
+"frittelle",
+"gorgonzola", 
+"grissini", 
+"lasagnette",
+"linguine",
+"mascarpone",
+"merendina",
+"muffin",
+"nocciola",
+"panettino",
+"parmigiano",
+"pasticcini", 
+"pizzette", 
+"polpettone",
+"ravioli",
+"ricciarelli",
+"salsiccia",
+"sbrisolona",
+"scamorza",
+"scrocchiarelle",
+"semifreddo",
+"sformato", 
+"sorbetto", 
+"stracciatella",
+"strudel",
+"tiramisu",
+"tortelloni",
+"tortine",
+"trancio",
+"trentino",
+"trippa",
+"tubetti", 
+"tuffo", 
+"tuttologo",
+ "ubriaco",
+ "uovo",
+ "valdostano",
+ "vaporiera",
+ "vermicelli",
+ "vitello",
+ "vol-au-vent"];
 
 let letteraA = document.getElementById("a");
 let letteraB = document.getElementById("b");
@@ -66,35 +165,33 @@ function gestisciClick(lettera) {
           console.log(array);
           if (confrontoArray(lettereParola, array)) {
             immagine.src = "assets/vittoria.png";
-            tastieraContainer.classList.add("hidden");
+            tastieraContainer.classList.add("opacity-0");
             setTimeout(() => {
               location.reload();
             }, 3000);
           }
         }
       });
-      lettera.style.color = "green";
-      lettera.style.borderColor = "green";
-      lettera.style.backgroundColor = "#003300";
+      lettera.classList.add("rilievo3");
     } else {
-      lettera.style.color = "red";
-      lettera.style.borderColor = "red";
-      lettera.style.backgroundColor = "#4d2c2c";
+      lettera.classList.add("rilievo4");
       punteggio++;
       let risultato = 6 - punteggio;
       vite.textContent = risultato;
       console.log(risultato);
       if (risultato == 0) {
         immagine.src = "assets/errore6.png";
-        tastieraContainer.classList.add("hidden");
+        tastieraContainer.classList.add("opacity-0");
         setTimeout(() => {
           immagine.src = "assets/perso.png";
         }, 500);
         setTimeout(() => {
           location.reload();
         }, 3000);
+
+
       } else if (risultato == 1) {
-        vite.style.color = "red";
+        vite.style.color = "rgb(220, 79, 82)";
         immagine.src = "assets/errore5.png";
       } else if (risultato == 2) {
         immagine.src = "assets/errore4.png";
