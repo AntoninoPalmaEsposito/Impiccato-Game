@@ -171,7 +171,7 @@ console.log(lettereParola);
             tastieraContainer.classList.add("opacity-0");
             setTimeout(() => {
               location.reload();
-            }, 4000);
+            }, 6000);
           }
         }
       });
@@ -200,7 +200,7 @@ console.log(lettereParola);
         }, 500);
         setTimeout(() => {
           location.reload();
-        }, 4000);
+        }, 6000);
 
 
       } else if (risultato == 1) {
