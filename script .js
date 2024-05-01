@@ -96,8 +96,7 @@ const parole = [
  "valdostano",
  "vaporiera",
  "vermicelli",
- "vitello",
- "vol-au-vent"];
+ "vitello"];
 
 let letteraA = document.getElementById("a");
 let letteraB = document.getElementById("b");
@@ -132,11 +131,12 @@ const parolaDaIndovinare = document.getElementById("parolaDaIndovinare");
 const vite = document.getElementById("vite");
 const reload = document.getElementById("reload");
 let immagine = document.getElementById("img");
-const tastieraContainer = document.getElementById("tastiera-container");
+const tastieraContainer = document.getElementById("tastieraac");
 
 vite.textContent = 6;
 let punteggio = 0;
 let array = [];
+let arrayp = [];
 
 function getParola() {
   let numero = Math.floor(Math.random() * parole.length);
@@ -156,7 +156,9 @@ function gestisciClick(lettera) {
     console.log(lettereParola);
     console.log(lettereParola.includes(letteraCliccata));
 
-    if (lettereParola.includes(letteraCliccata)) {
+    if (array.includes(letteraCliccata)){
+    console.log('hey');
+    } else if (lettereParola.includes(letteraCliccata)) {
       lettereParola.forEach((letteraParola, index) => {
         if (letteraParola === letteraCliccata) {
           parolaContainer.children[index].textContent = letteraCliccata;
@@ -164,6 +166,7 @@ function gestisciClick(lettera) {
           array.push(letteraCliccata);
           console.log(array);
           if (confrontoArray(lettereParola, array)) {
+            console.log('ciaoo');
             immagine.src = "assets/vittoria.png";
             tastieraContainer.classList.add("opacity-0");
             setTimeout(() => {
@@ -173,7 +176,12 @@ function gestisciClick(lettera) {
         }
       });
       lettera.classList.add("rilievo3");
-    } else {
+    } else if (arrayp.includes(letteraCliccata)) {
+          console.log('lettera già cliccata')
+    }
+    
+      else {
+      arrayp.push(letteraCliccata);
       lettera.classList.add("rilievo4");
       punteggio++;
       let risultato = 6 - punteggio;
