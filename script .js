@@ -145,7 +145,6 @@ function getParola() {
   parolaDaIndovinare.textContent.split("").forEach((lettera) => {
     const paragrafoContainer = document.createElement("p");
     paragrafoContainer.textContent = "_";
-    paragrafoContainer.classList.add("mb-[-1vw]")
     parolaContainer.appendChild(paragrafoContainer);
   });
 }
