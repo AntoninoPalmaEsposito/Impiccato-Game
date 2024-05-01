@@ -125,6 +125,7 @@ let letteraX = document.getElementById("x");
 let letteraY = document.getElementById("y");
 let letteraZ = document.getElementById("z");
 const parolaContainer = document.getElementById("parolaUser");
+const parolaFalso = document.getElementById("falso");
 const cancella = document.getElementById("cancella");
 const invia = document.getElementById("invia");
 const parolaDaIndovinare = document.getElementById("parolaDaIndovinare");
@@ -153,16 +154,15 @@ function gestisciClick(lettera) {
     const letteraCliccata = lettera.textContent.toLowerCase();
     const parolaSegreta = parolaDaIndovinare.textContent;
     const lettereParola = parolaSegreta.split("");
-    console.log(lettereParola);
-    console.log(lettereParola.includes(letteraCliccata));
-
+    
+console.log(lettereParola);
     if (array.includes(letteraCliccata)){
     console.log('hey');
     } else if (lettereParola.includes(letteraCliccata)) {
       lettereParola.forEach((letteraParola, index) => {
         if (letteraParola === letteraCliccata) {
           parolaContainer.children[index].textContent = letteraCliccata;
-          console.log(lettereParola);
+          
           array.push(letteraCliccata);
           console.log(array);
           if (confrontoArray(lettereParola, array)) {
@@ -171,7 +171,7 @@ function gestisciClick(lettera) {
             tastieraContainer.classList.add("opacity-0");
             setTimeout(() => {
               location.reload();
-            }, 3000);
+            }, 4000);
           }
         }
       });
@@ -188,6 +188,11 @@ function gestisciClick(lettera) {
       vite.textContent = risultato;
       console.log(risultato);
       if (risultato == 0) {
+        parolaContainer.classList.remove("flex");
+        parolaContainer.classList.add("hidden");
+        parolaFalso.classList.remove("hidden");
+        parolaFalso.classList.add("flex");
+
         immagine.src = "assets/errore6.png";
         tastieraContainer.classList.add("opacity-0");
         setTimeout(() => {
@@ -195,7 +200,7 @@ function gestisciClick(lettera) {
         }, 500);
         setTimeout(() => {
           location.reload();
-        }, 3000);
+        }, 4000);
 
 
       } else if (risultato == 1) {
